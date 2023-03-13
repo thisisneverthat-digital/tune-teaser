@@ -1,0 +1,339 @@
+@font-face {
+  font-family: TUNEHEAD-0111;
+  src: url("/fonts/TUNEHEAD-0111.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: FavoritHangulUI;
+  src: url("/fonts/FavoritHangulUI-Medium.otf") format("opentype");
+  font-weight: medium;
+  font-style: normal;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+body {
+  font-family: "FavoritHangulUI";
+  /*font-size: 12px;*/
+  /*line-height: 1;*/
+  color: #a8a8a8;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  padding: 2em;
+}
+
+div.container {
+  /*border: 1px solid lightblue;*/
+  width: calc(100vw - 4em);
+  height: calc(100vh - 4em);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+div.text-box-container {
+  width: 820px;
+  height: 125px;
+  margin: 0 auto;
+  /*border: 1px solid blue;*/
+}
+
+div.text-box {
+  font-size: 13.75px;
+  line-height: 1.1;
+  background: transparent;
+  margin: 0 auto;
+  cursor: pointer;
+  /*border: 1px solid #ce2117;*/
+}
+
+div.text-box h2 {
+  cursor: pointer;
+}
+
+div.text-box#text1 {
+  font-family: "TUNEHEAD-0111";
+  text-align: center;
+  width: 2.55em;
+  height: 0.96em;
+  font-size: 20rem;
+  line-height: 1.08;
+  color: #a8a8a8;
+  margin-bottom: 2rem;
+}
+
+div.text-box#text1 h2 {
+  margin: 0 0 0 -0.02em;
+}
+
+div.text-box#text2 {
+  width: 390px;
+  height: 9em;
+  /*border: 1px solid red;*/
+  float: left;
+}
+
+div.text-box#text3 {
+  width: 390px;
+  height: 9em;
+  /*border: 1px solid red;*/
+  float: right;
+}
+
+p:nth-child(2),
+p:nth-child(4) {
+  text-indent: 4.4em;
+}
+
+div.iamge-box {
+  cursor: pointer;
+}
+
+div.image-1 {
+  background-image: url("/images/image-1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 600px;
+  height: 550px;
+  position: absolute;
+  top: -20px;
+  left: 60%;
+  transform: translateX(-40%);
+  rotate: 20deg;
+}
+
+div.image-2 {
+  background-image: url("/images/image-2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 440px;
+  height: 565px;
+  position: absolute;
+  top: 100px;
+  right: 50px;
+  rotate: -80deg;
+}
+
+div.image-3 {
+  background-image: url("/images/image-3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 530px;
+  height: 405px;
+  position: absolute;
+  bottom: 0;
+  right: 50px;
+  rotate: -10deg;
+}
+
+/*div.image-4 {*/
+/*  background-image: url("/images/image-4.png");*/
+/*  background-size: cover;*/
+/*  background-repeat: no-repeat;*/
+/*  background-position: center;*/
+/*  width: 50vw;*/
+/*  height: 50vw;*/
+/*  position: absolute;*/
+/*  top: 2em;*/
+/*  right: 1em;*/
+/*  rotate: -15deg;*/
+/*  !*border: 1px solid red;*!*/
+/*}*/
+
+div.image-5 {
+  background-image: url("/images/image-5.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  rotate: 10deg;
+  /*border: 1px solid red;*/
+}
+
+div.image-6 {
+  background-image: url("/images/image-6.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 500px;
+  height: 420px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  rotate: 20deg;
+  /*border: 1px solid red;*/
+}
+
+@media screen and (max-width: 1023px) {
+  *,
+  *:before,
+  *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+  }
+
+  body {
+    font-family: "FavoritHangulUI";
+    font-size: 13px;
+    line-height: 1.15;
+    color: #a8a8a8;
+    overflow: hidden;
+    width: 100vw;
+    max-height: 100vh;
+    position: relative;
+    padding: 2em;
+  }
+
+  div.container {
+    width: calc(100vw - 4em);
+    height: calc(100vh - 4em);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /*border: 1px solid skyblue;*/
+  }
+
+  div.text-box-container {
+    width: 100%;
+    height: 350px;
+    margin: 0 auto;
+    /*border: 1px solid blue;*/
+  }
+
+  div.text-box {
+    font-size: 17.5px;
+    line-height: 1.2;
+    background: transparent;
+    margin: 0 auto;
+    cursor: pointer;
+    /*text-transform: uppercase;*/
+    /*border: 1px solid #ce2117;*/
+  }
+
+  div.text-box#text1 {
+    font-family: "TUNEHEAD-0111";
+    font-size: 12.25rem;
+    text-align: center;
+    width: 100%;
+    height: 0.96em;
+    line-height: 1.08;
+    color: #a8a8a8;
+    margin-bottom: 1.5rem;
+    /*border: 1px solid red;*/
+  }
+
+  div.text-box#text1 h2 {
+    margin: 0 0 0 -0.02em;
+  }
+
+  div.text-box#text2 {
+    width: 100%;
+    height: 9.6em;
+    /*border: 1px solid red;*/
+    float: left;
+    margin-bottom: 1em;
+  }
+
+  div.text-box#text3 {
+    width: 100%;
+    height: 9em;
+    /*border: 1px solid red;*/
+    float: left;
+  }
+
+  div.iamge-box {
+    cursor: pointer;
+  }
+
+  div.image-1 {
+    background-image: url("/images/image-1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 238px;
+    height: 220px;
+    position: absolute;
+    top: -238px;
+    left: 0;
+    rotate: 0deg;
+    /*border: 1px solid red;*/
+  }
+
+  div.image-2 {
+    background-image: url("/images/image-2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 182px;
+    height: 236px;
+    position: absolute;
+    top: -265px;
+    right: 0;
+    rotate: 10deg;
+    /*border: 1px solid red;*/
+  }
+
+  div.image-3 {
+    background-image: url("/images/image-3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    top: -240px;
+    left: 10em;
+    rotate: -10deg;
+    /*border: 1px solid red;*/
+  }
+
+  div.image-5 {
+    background-image: url("/images/image-5.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: -200px;
+    left: 100px;
+    rotate: 30deg;
+    /*border: 1px solid red;*/
+  }
+
+  div.image-6 {
+    background-image: url("/images/image-6.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 210px;
+    height: 180px;
+    position: absolute;
+    top: -200px;
+    left: 100px;
+    rotate: 10deg;
+    /*border: 1px solid red;*/
+  }
+}

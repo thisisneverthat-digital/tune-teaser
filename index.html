@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Test</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- jQuery *Required -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="jGravity.js"></script>
+    <script>
+      $(document).ready(() => {
+        $("body").jGravity({
+          target: ".text-box, .image-box",
+          ignoreClass: "ignoreMe",
+          weight: 40,
+          depth: 9,
+          drag: true,
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="text-box jGravity" id="text1">
+        <h2 class="ignoreMe">TUNE</h2>
+      </div>
+
+      <div class="text-box-container">
+        <div class="text-box jGravity" id="text2">
+          <p class="ignoreMe">
+            Located in Seong-su, the emerging epicenter for subcultures<br />and
+            communities of Seoul, TUNE is a creative concept<br />store and
+            community hub with its roots in the 90's culture of<br />basketball,
+            music and art.
+          </p>
+          <p class="ignorMe">
+            Coming from the industry leading Korean brand<br />thisisneverthat,
+            TUNE marks its beginning backed by<br />creative know-hows and
+            infrastructurethat we've built over<br />the past decade.
+          </p>
+        </div>
+        <div class="text-box jGravity" id="text3">
+          <p class="ignoreMe">
+            As community leaders, we are always contemplating<br />as to how we
+            can act our part in art, culture as well as the fashion industry.
+          </p>
+          <p>
+            Planting seeds of inspiration for new generations and at the same
+            time leaving progressive impacts in the market for all to witness,
+            our aim is to elevate the culture<br />and appreciation towards it
+            of all those within.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="image-box image-1"></div>
+    <div class="image-box image-2"></div>
+    <div class="image-box image-3"></div>
+    <div class="image-box image-5"></div>
+    <div class="image-box image-6"></div>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(["_setAccount", "UA-36251023-1"]);
+      _gaq.push(["_setDomainName", "jqueryscript.net"]);
+      _gaq.push(["_trackPageview"]);
+
+      (function () {
+        var ga = document.createElement("script");
+        ga.type = "text/javascript";
+        ga.async = true;
+        ga.src =
+          ("https:" == document.location.protocol
+            ? "https://ssl"
+            : "http://www") + ".google-analytics.com/ga.js";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>
