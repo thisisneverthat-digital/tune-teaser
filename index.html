@@ -16,7 +16,7 @@
     <script>
       $(document).ready(() => {
         $("body").jGravity({
-          target: ".text-box, .image-box",
+          target: ".image-box",
           ignoreClass: "ignoreMe",
           weight: 40,
           depth: 9,
@@ -27,44 +27,28 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="text-box jGravity" id="text1">
-        <h2 class="ignoreMe">TUNE</h2>
+    <div class="header">
+      <div class="location">Latitude 37.498928<br />Longtitude 127.028114</div>
+      <div class="date">
+        <span id="today"></span>
       </div>
+      <div class="weather">Current 10.56°C <br />Wind 6.2m/s</div>
+    </div>
 
-      <div class="text-box-container">
-        <div class="text-box jGravity" id="text2">
-          <p class="ignoreMe">
-            Located in Seong-su, the emerging epicenter for subcultures and
-            communities of Seoul, TUNE is a creative concept store and community
-            hub with its roots in the 90's culture of basketball, music and art.
-          </p>
-          <p class="ignorMe">
-            Coming from the industry leading Korean brand thisisneverthat&#174;,
-            TUNE marks its beginning backed by creative know-hows and
-            infrastructurethat we've built over the past decade.
-          </p>
-        </div>
-        <div class="text-box jGravity" id="text3">
-          <p class="ignoreMe">
-            As community leaders, we are always contemplating as to how we can
-            act our part in art, culture as well as the fashion industry.
-          </p>
-          <p>
-            Planting seeds of inspiration for new generations and at the same
-            time leaving progressive impacts in the market for all to witness,
-            our aim is to elevate the culture and appreciation towards it of all
-            those within.
-          </p>
-        </div>
+    <div class="container">
+      <div class="text-box">
+        <h2>TUNE</h2>
+        <p>3, Seongsui-ro 7ga-gil</p>
+        <p>Seongdong-gu</p>
+        <p>Seoul Republic of Korea</p>
+        <p>@tune.kr</p>
       </div>
     </div>
 
     <div class="image-box image-1"></div>
     <div class="image-box image-2"></div>
     <div class="image-box image-3"></div>
-    <div class="image-box image-5"></div>
-    <!--    <div class="image-box image-6"></div>-->
+    <div class="image-box image-4"></div>
 
     <script type="text/javascript">
       var _gaq = _gaq || [];
@@ -84,5 +68,6 @@
         s.parentNode.insertBefore(ga, s);
       })();
     </script>
+    <script src="today.js"></script>
   </body>
 </html>

@@ -8,7 +8,14 @@
 @font-face {
   font-family: FavoritHangulUI;
   src: url("/fonts/FavoritHangulUI-Medium.otf") format("opentype");
-  font-weight: medium;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: FavoritHangulUI;
+  src: url("/fonts/FavoritHangulUI-Bold.otf") format("opentype");
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -23,78 +30,76 @@
 
 body {
   font-family: "FavoritHangulUI";
-  font-size: 14px;
-  line-height: 1.1;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1;
   word-break: keep-all;
   color: #a8a8a8;
   overflow: hidden;
   width: 100vw;
   height: 100vh;
   position: relative;
-  padding: 2em;
-  /*border: 1px solid red;*/
+  padding: 20px;
+  cursor: default;
 }
 
+/* Header Style */
+div.header {
+  font-size: 24px;
+  color: #000;
+  text-transform: uppercase;
+  display: flex;
+  flex-display: row;
+  flex: 1;
+  /*border: 1px solid green;*/
+}
+
+div.header div {
+  flex: 1;
+  /*border: 1px solid blue;*/
+}
+
+div.location {
+  text-align: left;
+}
+
+div.date {
+  text-align: center;
+}
+
+div.weather {
+  text-align: right;
+}
+
+/* Text Container Style */
 div.container {
-  width: calc(100vw - 4em);
-  height: calc(100vh - 4em);
+  width: 100%;
+  height: calc(100% - 60px);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  /*border: 1px solid lightblue;*/
+  align-items: center;
+  /*border: 2px solid purple;*/
 }
 
-div.text-box-container {
-  /*width: 820px;*/
-  /*height: 125px;*/
-  /*margin: 0 auto;*/
-  /*border: 1px solid blue;*/
-  width: 50vw;
-}
-
-div.text-box {
-  background: transparent;
-  /*margin: 0 auto;*/
-  cursor: pointer;
-  /*border: 1px solid #ce2117;*/
+div.container .text-box {
+  text-align: center;
+  text-transform: uppercase;
+  /*border: 1px solid crimson;*/
 }
 
 div.text-box h2 {
-  cursor: pointer;
-}
-
-div.text-box#text1 {
   font-family: "TUNEHEAD-0111";
-  text-align: center;
-  width: 50vw;
-  height: 18.75vw;
-  font-size: 19.5vw;
-  color: #a8a8a8;
-  margin-bottom: 1rem;
+  font-size: 240px;
 }
 
-div.text-box#text1 h2 {
-  margin: -0.01em 0 0 -0.02em;
+div.text-box p {
+  font-size: 96px;
+  letter-spacing: -2%;
+  line-height: 0.9;
 }
 
-div.text-box#text2,
-div.text-box#text3 {
-  width: 24vw;
-}
-div.text-box#text2 {
-  float: left;
-}
-
-div.text-box#text3 {
-  float: right;
-}
-
-p:nth-child(2),
-p:nth-child(4) {
-  text-indent: 4.4em;
-}
-
+/* Image Box Style */
 div.iamge-box {
   cursor: pointer;
 }
@@ -104,13 +109,12 @@ div.image-1 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 600px;
-  height: 550px;
+  width: 700px;
+  height: 639.07px;
   position: absolute;
-  top: 0;
-  left: 80%;
-  transform: translateX(-40%);
-  rotate: 20deg;
+  top: -80px;
+  left: -20px;
+  rotate: 10deg;
 }
 
 div.image-2 {
@@ -118,12 +122,12 @@ div.image-2 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 440px;
-  height: 565px;
+  width: 450px;
+  height: 592.92px;
   position: absolute;
-  bottom: -50px;
-  left: 100px;
-  rotate: 80deg;
+  top: -50px;
+  right: 40px;
+  rotate: -80deg;
 }
 
 div.image-3 {
@@ -131,141 +135,100 @@ div.image-3 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 530px;
-  height: 405px;
+  width: 550px;
+  height: 418.85px;
   position: absolute;
   bottom: 0px;
   right: 20px;
-  rotate: -10deg;
+  rotate: -12deg;
 }
 
-div.image-5 {
-  background-image: url("/images/image-5.png");
+div.image-4 {
+  background-image: url("/images/image-4.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   width: 450px;
   height: 450px;
   position: absolute;
-  top: -50px;
+  bottom: -10px;
   left: 20px;
-  rotate: 20deg;
-  /*border: 1px solid red;*/
-}
-
-div.image-6 {
-  background-image: url("/images/image-6.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 500px;
-  height: 420px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  rotate: 20deg;
-  /*border: 1px solid red;*/
+  rotate: -75deg;
 }
 
 @media screen and (max-width: 1023px) {
-  @font-face {
-    font-family: TUNEHEAD-0111;
-    src: url("/fonts/TUNEHEAD-0111.otf") format("opentype");
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: FavoritHangulUI;
-    src: url("/fonts/FavoritHangulUI-Medium.otf") format("opentype");
-    font-weight: medium;
-    font-style: normal;
-  }
-
-  *,
-  *:before,
-  *:after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 100%;
-  }
-
   body {
     font-family: "FavoritHangulUI";
-    font-size: 10px;
-    line-height: 1.1;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1;
     word-break: keep-all;
     color: #a8a8a8;
     overflow: hidden;
     width: 100vw;
     height: 100vh;
     position: relative;
-    padding: 2em;
-    /*border: 1px solid red;*/
+    padding: 20px;
+    cursor: default;
   }
 
+  /* Header Style */
+  div.header {
+    font-size: 12px;
+    color: #000;
+    text-transform: uppercase;
+    display: flex;
+    flex-display: row;
+    flex: 1;
+    /*border: 1px solid green;*/
+  }
+
+  div.header div {
+    flex: 1;
+    /*border: 1px solid blue;*/
+  }
+
+  div.location {
+    text-align: left;
+  }
+
+  div.date {
+    text-align: center;
+  }
+
+  div.weather {
+    text-align: right;
+  }
+
+  /* Text Container Style */
   div.container {
-    width: calc(100vw - 4em);
-    height: calc(100vh - 4em);
+    width: 100%;
+    height: calc(100% - 40px);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: flex-start;
-    /*border: 1px solid lightblue;*/
+    /*border: 2px solid purple;*/
   }
 
-  div.text-box-container {
-    /*width: 820px;*/
-    /*height: 125px;*/
-    /*margin: 0 auto;*/
-    /*border: 1px solid blue;*/
-    width: 86vw;
-  }
-
-  div.text-box {
-    background: transparent;
-    /*margin: 0 auto;*/
-    cursor: pointer;
-    /*border: 1px solid #ce2117;*/
+  div.container .text-box {
+    text-align: center;
+    text-transform: uppercase;
+    /*border: 1px solid crimson;*/
   }
 
   div.text-box h2 {
-    cursor: pointer;
-  }
-
-  div.text-box#text1 {
     font-family: "TUNEHEAD-0111";
-    text-align: center;
-    width: 86vw;
-    height: 31vw;
-    font-size: 32vw;
-    color: #a8a8a8;
-    margin-bottom: 1rem;
+    font-size: 128px;
   }
 
-  div.text-box#text1 h2 {
-    margin: -0.01em 0 0 -0.02em;
+  div.text-box p {
+    font-size: 24px;
+    letter-spacing: -2%;
+    line-height: 0.9;
   }
 
-  div.text-box#text2,
-  div.text-box#text3 {
-    width: 86vw;
-  }
-  div.text-box#text2 {
-    float: left;
-    margin-bottom: 1rem;
-  }
-
-  div.text-box#text3 {
-    float: left;
-  }
-
-  p:nth-child(2),
-  p:nth-child(4) {
-    text-indent: 1.25em;
-  }
-
+  /* Image Box Style */
   div.iamge-box {
     cursor: pointer;
   }
@@ -275,11 +238,11 @@ div.image-6 {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: 300px;
-    height: 270px;
+    width: 250px;
+    height: 228.24px;
     position: absolute;
-    top: -280px;
-    left: 250px;
+    top: -230px;
+    left: 200px;
     rotate: 0deg;
   }
 
@@ -288,12 +251,12 @@ div.image-6 {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: 200px;
-    height: 265px;
+    width: 175px;
+    height: 230.58px;
     position: absolute;
-    top: -270px;
-    left: 100px;
-    rotate: 0deg;
+    top: -250px;
+    left: 250px;
+    rotate: 20deg;
   }
 
   div.image-3 {
@@ -301,39 +264,24 @@ div.image-6 {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: 280px;
-    height: 212px;
-    position: absolute;
-    top: -260px;
-    right: 150px;
-    rotate: 30deg;
-  }
-
-  div.image-5 {
-    background-image: url("/images/image-5.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     width: 200px;
-    height: 200px;
+    height: 152.31px;
     position: absolute;
-    top: -220px;
-    left: 50px;
+    top: -250px;
+    right: 20px;
     rotate: 10deg;
-    /*border: 1px solid red;*/
   }
 
-  div.image-6 {
-    background-image: url("/images/image-6.png");
+  div.image-4 {
+    background-image: url("/images/image-4.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: 230px;
-    height: 200px;
+    width: 175px;
+    height: 175px;
     position: absolute;
-    top: -240px;
-    left: 0;
+    top: -250px;
+    left: 0px;
     rotate: 20deg;
-    /*border: 1px solid red;*/
   }
 }
