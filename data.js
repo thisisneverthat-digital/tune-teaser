@@ -42,8 +42,6 @@ getLocation()
     const nowLocation = data.loc.split(",");
     latitude = nowLocation[0];
     longitude = nowLocation[1];
-    $("#latitude").append(latitude);
-    $("#longitude").append(longitude);
     return getWeather(latitude, longitude).then((data) => {
       const temperature = data.main.temp.toFixed(0);
       const wind = data.wind.speed.toFixed(0);
