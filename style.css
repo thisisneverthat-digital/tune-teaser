@@ -1,13 +1,14 @@
 @font-face {
-  font-family: TUNEHEAD-0111;
-  src: url("/fonts/TUNEHEAD-0111.otf") format("opentype");
-  font-weight: normal;
+  font-family: TUNEHEAD;
+  src: url('/fonts/TUNEHEAD.woff2') format('woff2'), url('/fonts/TUNEHEAD.otf') format('opentype');
   font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
 }
 
 @font-face {
   font-family: FavoritHangulUI;
-  src: url("/fonts/FavoritHangulUI-Medium.otf") format("opentype");
+  src: url("/fonts/FavoritHangulUI-Regular.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
 }
@@ -46,16 +47,18 @@ body {
 /* Header Style */
 div.header {
   font-size: 24px;
+  font-weight: 300;
   color: #000;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   display: flex;
-  flex-display: row;
+  flex-direction: row;
   flex: 1;
   /*border: 1px solid green;*/
 }
 
 div.header div {
   flex: 1;
+  z-index: 999;
   /*border: 1px solid blue;*/
 }
 
@@ -90,7 +93,7 @@ div.container .text-box {
 }
 
 div.text-box h2 {
-  font-family: "TUNEHEAD-0111";
+  font-family: "TUNEHEAD";
   font-size: 240px;
   margin-top: 8px;
 }
@@ -112,7 +115,7 @@ div.image-1 {
   background-repeat: no-repeat;
   background-position: center;
   width: 700px;
-  height: 639.07px;
+  height: 638px;
   position: absolute;
   top: -80px;
   left: -20px;
@@ -125,7 +128,7 @@ div.image-2 {
   background-repeat: no-repeat;
   background-position: center;
   width: 450px;
-  height: 592.92px;
+  height: 594px;
   position: absolute;
   top: -50px;
   right: 40px;
@@ -138,7 +141,7 @@ div.image-3 {
   background-repeat: no-repeat;
   background-position: center;
   width: 550px;
-  height: 418.85px;
+  height: 418px;
   position: absolute;
   bottom: 0px;
   right: 20px;
@@ -160,46 +163,18 @@ div.image-4 {
 
 @media screen and (max-width: 1023px) {
   body {
-    font-family: "FavoritHangulUI";
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 1;
-    word-break: keep-all;
-    color: #a8a8a8;
-    overflow: hidden;
     width: 100vw;
     height: var(--app-height);
     position: relative;
-    padding: 16px 20px;
-    cursor: default;
   }
 
   /* Header Style */
   div.header {
     font-size: 12px;
-    color: #000;
-    text-transform: uppercase;
-    display: flex;
-    flex-display: row;
-    flex: 1;
-    /*border: 1px solid green;*/
-  }
-
-  div.header div {
-    flex: 1;
-    /*border: 1px solid blue;*/
-  }
-
-  div.location {
-    text-align: left;
   }
 
   #location-title {
     display: none;
-  }
-
-  div.date {
-    text-align: center;
   }
 
   div.weather {
@@ -210,83 +185,44 @@ div.image-4 {
   div.container {
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /*border: 2px solid purple;*/
-  }
-
-  div.container .text-box {
-    text-align: center;
-    text-transform: uppercase;
-    /*border: 1px solid crimson;*/
   }
 
   div.text-box h2 {
-    font-family: "TUNEHEAD-0111";
     font-size: 122px;
     margin: 4px 0 0 4px;
   }
 
   div.text-box p {
     font-size: 24px;
-    letter-spacing: -2%;
-    line-height: 0.9;
-  }
-
-  /* Image Box Style */
-  div.iamge-box {
-    cursor: pointer;
   }
 
   div.image-1 {
-    background-image: url("/images/image-1.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     width: 250px;
-    height: 228.24px;
-    position: absolute;
+    height: 228px;
     top: -230px;
     left: 200px;
     rotate: 0deg;
   }
 
   div.image-2 {
-    background-image: url("/images/image-2.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 175px;
-    height: 230.58px;
-    position: absolute;
+    width: 174px;
+    height: 230px;
     top: -250px;
     left: 250px;
     rotate: 20deg;
   }
 
   div.image-3 {
-    background-image: url("/images/image-3.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     width: 200px;
-    height: 152.31px;
-    position: absolute;
+    height: 152px;
     top: -250px;
     right: 20px;
     rotate: 10deg;
   }
 
   div.image-4 {
-    background-image: url("/images/image-4.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 175px;
-    height: 175px;
-    position: absolute;
+    width: 176px;
+    height: 176px;
     top: -250px;
     left: 0px;
     rotate: 20deg;
