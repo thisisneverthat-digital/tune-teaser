@@ -28,11 +28,17 @@
 
   <body>
     <div class="header">
-      <div class="location">Latitude 37.498928<br />Longtitude 127.028114</div>
+      <div class="location">
+        <div>Latitude <span id="latitude"></span></div>
+        <div>Longitude <span id="longitude"></span></div>
+      </div>
       <div class="date">
         <span id="today"></span>
       </div>
-      <div class="weather">Current 10.56°C <br />Wind 6.2m/s</div>
+      <div class="weather">
+        <div>Current <span id="temp">°C</span></div>
+        <div>Wind <span id="wind">m/s</span></div>
+      </div>
     </div>
 
     <div class="container">
@@ -68,6 +74,6 @@
         s.parentNode.insertBefore(ga, s);
       })();
     </script>
-    <script src="today.js"></script>
+    <script src="data.js"></script>
   </body>
 </html>
