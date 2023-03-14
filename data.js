@@ -1,18 +1,25 @@
-// const date = new Date();
-// const month = date.getMonth() + 1;
-// const day = date.getDate();
-// const year = date.getFullYear();
-//
-// document.querySelector("#today").innerHTML = `${month} ${day} ${year}`;
+const makeNewDate = () => {
+  const newDate = new Date();
 
-var date = new Date();
-var a = new Intl.DateTimeFormat("en", {
-  dateStyle: "full",
-  timeStyle: "full",
-}).format(date);
-console.log(a);
+  const formatToday = new Intl.DateTimeFormat("en", {
+    dateStyle: "medium",
+  }).format(newDate);
 
-document.querySelector("#today").innerText = `${a}`;
+  const formatTime = new Intl.DateTimeFormat("en", {
+    timeStyle: "medium",
+  }).format(newDate);
+
+  const time = formatTime.replace("PM", "");
+  let fullTime = time >= 10 ? time : "0" + time;
+
+  // console.log(today);
+  document.querySelector("#today").innerText = formatToday;
+  document.querySelector("#time").innerText = fullTime;
+
+  setTimeout(makeNewDate, 1000);
+};
+
+makeNewDate();
 
 //TODO: 위치 정보가 부정확한편임. 다른 API 찾아보기
 const getLocation = async () => {
@@ -40,7 +47,6 @@ getLocation()
     return getWeather(latitude, longitude).then((data) => {
       const temperature = data.main.temp.toFixed(0);
       const wind = data.wind.speed.toFixed(0);
-      console.log(wind);
       $("#temp").prepend(temperature);
       $("#wind").prepend(wind);
     });

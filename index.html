@@ -24,16 +24,26 @@
         });
       });
     </script>
+    <script>
+      window.addEventListener("DOMContentLoaded", function (ev) {
+        const { innerHeight } = window;
+        document.documentElement.style.setProperty(
+          "--app-height",
+          `${innerHeight}px`
+        );
+      });
+    </script>
   </head>
 
   <body>
     <div class="header">
       <div class="location">
-        <div>Latitude <span id="latitude"></span></div>
-        <div>Longitude <span id="longitude"></span></div>
+        <div><span id="latitude"></span>°N</div>
+        <div><span id="longitude"></span>°E</div>
       </div>
       <div class="date">
-        <span id="today"></span>
+        <div><span id="today"></span></div>
+        <div><span id="time"></span></div>
       </div>
       <div class="weather">
         <div>Current <span id="temp">°C</span></div>
@@ -56,24 +66,6 @@
     <div class="image-box image-3"></div>
     <div class="image-box image-4"></div>
 
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(["_setAccount", "UA-36251023-1"]);
-      _gaq.push(["_setDomainName", "jqueryscript.net"]);
-      _gaq.push(["_trackPageview"]);
-
-      (function () {
-        var ga = document.createElement("script");
-        ga.type = "text/javascript";
-        ga.async = true;
-        ga.src =
-          ("https:" == document.location.protocol
-            ? "https://ssl"
-            : "http://www") + ".google-analytics.com/ga.js";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
     <script src="data.js"></script>
   </body>
 </html>

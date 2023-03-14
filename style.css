@@ -39,7 +39,7 @@ body {
   width: 100vw;
   height: 100vh;
   position: relative;
-  padding: 20px;
+  padding: 16px 20px;
   cursor: default;
 }
 
@@ -64,6 +64,7 @@ div.location {
 }
 
 div.date {
+  /*display: flex;*/
   text-align: center;
 }
 
@@ -91,10 +92,11 @@ div.container .text-box {
 div.text-box h2 {
   font-family: "TUNEHEAD-0111";
   font-size: 240px;
+  margin-top: 8px;
 }
 
 div.text-box p {
-  font-size: 96px;
+  font-size: 84px;
   letter-spacing: -2%;
   line-height: 0.9;
 }
@@ -166,9 +168,9 @@ div.image-4 {
     color: #a8a8a8;
     overflow: hidden;
     width: 100vw;
-    height: 100vh;
+    height: var(--app-height);
     position: relative;
-    padding: 20px;
+    padding: 16px 20px;
     cursor: default;
   }
 
@@ -192,6 +194,10 @@ div.image-4 {
     text-align: left;
   }
 
+  #location-title {
+    display: none;
+  }
+
   div.date {
     text-align: center;
   }
@@ -203,7 +209,7 @@ div.image-4 {
   /* Text Container Style */
   div.container {
     width: 100%;
-    height: calc(100% - 40px);
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -219,7 +225,8 @@ div.image-4 {
 
   div.text-box h2 {
     font-family: "TUNEHEAD-0111";
-    font-size: 128px;
+    font-size: 122px;
+    margin: 4px 0 0 4px;
   }
 
   div.text-box p {
