@@ -1,6 +1,7 @@
 @font-face {
   font-family: TUNEHEAD;
-  src: url('/fonts/TUNEHEAD.woff2') format('woff2'), url('/fonts/TUNEHEAD.otf') format('opentype');
+  src: url("/fonts/TUNEHEAD.woff2") format("woff2"),
+    url("/fonts/TUNEHEAD.otf") format("opentype");
   font-style: normal;
   font-weight: normal;
   text-rendering: optimizeLegibility;
@@ -40,26 +41,32 @@ body {
   width: 100vw;
   height: 100vh;
   position: relative;
-  padding: 16px 20px;
+  /*padding: 16px 20px;*/
   cursor: default;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
 }
 
 /* Header Style */
 div.header {
+  width: 100vw;
+  height: 10vh;
   font-size: 24px;
   font-weight: 300;
   color: #000;
-  /* text-transform: uppercase; */
   display: flex;
   flex-direction: row;
   flex: 1;
   /*border: 1px solid green;*/
+  padding: 20px 24px;
 }
 
 div.header div {
   flex: 1;
   z-index: 999;
-  /*border: 1px solid blue;*/
 }
 
 div.location {
@@ -78,7 +85,7 @@ div.weather {
 /* Text Container Style */
 div.container {
   width: 100%;
-  height: calc(100% - 60px);
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -86,31 +93,69 @@ div.container {
   /*border: 2px solid purple;*/
 }
 
-div.container .text-box {
+div.container .text_box {
   text-align: center;
   text-transform: uppercase;
   /*border: 1px solid crimson;*/
 }
 
-div.text-box h2 {
+div.text_box h2 {
   font-family: "TUNEHEAD";
   font-size: 240px;
-  margin-top: 8px;
+  margin: 8px 0 4px 0;
 }
 
-div.text-box p {
+div.text_box p {
   font-size: 84px;
   letter-spacing: -2%;
   line-height: 0.9;
 }
 
+/* Footer Style */
+footer {
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  padding: 20px 24px;
+  align-items: flex-end;
+  /*border: 1px solid red;*/
+}
+
+footer div {
+  font-size: 24px;
+  font-weight: 300;
+  color: #000;
+  flex: 1;
+  z-index: 999;
+  /*border: 1px solid blue;*/
+}
+
+.arrow:before {
+  content: "↗";
+  vertical-align: 0;
+  padding-left: 4px;
+}
+
+.arrow:nth-child(1) {
+  padding-right: 12px;
+}
+
+footer div:nth-child(2) {
+  text-align: right;
+}
+
 /* Image Box Style */
-div.iamge-box {
+div.image_box {
   cursor: pointer;
 }
 
-div.image-1 {
-  background-image: url("/images/image-1.png");
+div.image_box:hover {
+  cursor: pointer;
+}
+
+div.image_1 {
+  background-image: url("/images/image_1.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -122,8 +167,8 @@ div.image-1 {
   rotate: 10deg;
 }
 
-div.image-2 {
-  background-image: url("/images/image-2.png");
+div.image_2 {
+  background-image: url("/images/image_2.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -135,8 +180,8 @@ div.image-2 {
   rotate: -80deg;
 }
 
-div.image-3 {
-  background-image: url("/images/image-3.png");
+div.image_3 {
+  background-image: url("/images/image_3.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -148,8 +193,8 @@ div.image-3 {
   rotate: -12deg;
 }
 
-div.image-4 {
-  background-image: url("/images/image-4.png");
+div.image_4 {
+  background-image: url("/images/image_4.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -184,19 +229,39 @@ div.image-4 {
   /* Text Container Style */
   div.container {
     width: 100%;
-    height: 100%;
+    /*border: 1px solid red;*/
   }
 
-  div.text-box h2 {
+  div.text_box h2 {
     font-size: 122px;
-    margin: 4px 0 0 4px;
+    margin: 4px 0 4px 4px;
   }
 
-  div.text-box p {
+  div.text_box p {
     font-size: 24px;
   }
 
-  div.image-1 {
+  footer {
+    /*border: 1px solid red;*/
+  }
+
+  footer div {
+    font-size: 10px;
+    /*border: 1px solid blue;*/
+  }
+
+  footer div:nth-child(2) {
+    font-size: 10px;
+    flex-grow: 1.5;
+  }
+
+  .arrow:before {
+    font-size: 10px;
+    vertical-align: -1px;
+    padding-left: 2px;
+  }
+
+  div.image_1 {
     width: 250px;
     height: 228px;
     top: -230px;
@@ -204,7 +269,7 @@ div.image-4 {
     rotate: 0deg;
   }
 
-  div.image-2 {
+  div.image_2 {
     width: 174px;
     height: 230px;
     top: -250px;
@@ -212,7 +277,7 @@ div.image-4 {
     rotate: 20deg;
   }
 
-  div.image-3 {
+  div.image_3 {
     width: 200px;
     height: 152px;
     top: -250px;
@@ -220,7 +285,7 @@ div.image-4 {
     rotate: 10deg;
   }
 
-  div.image-4 {
+  div.image_4 {
     width: 176px;
     height: 176px;
     top: -250px;

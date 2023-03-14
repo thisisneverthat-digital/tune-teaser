@@ -167,3 +167,4 @@ pip-log.txt
 
 # CUSTOM
 localRes/
+/node_modules/
